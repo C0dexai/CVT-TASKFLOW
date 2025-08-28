@@ -1,0 +1,6 @@
+{
+  "name": "CASSA VEGAS Taskflow",
+  "description": "An AI-powered Kanban board for a clandestine tech crew, 'CASSA VEGAS'. It uses Gemini to generate tasks, assign them to agents, and suggest hand-offs as tasks move through the workflow.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

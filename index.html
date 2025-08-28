@@ -1,0 +1,93 @@
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.15.0"
+  }
+}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CASSA VEGAS Taskflow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'primary': '#0f172a',
+              'primary-light': '#1e293b',
+              'primary-lighter': '#334155',
+              'accent': '#d90429',
+              'neutral': '#f3f4f6',
+              'neutral-focus': '#d1d5db',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-image: url('https://images.unsplash.com/photo-1583311853348-fe40417235b2?q=80&w=3870&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-color: #0f172a; /* Fallback */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .glass-effect {
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .neon-text-accent {
+        color: #fff;
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #d90429,
+            0 0 30px #d90429,
+            0 0 40px #d90429,
+            0 0 55px #d90429,
+            0 0 75px #d90429;
+      }
+      .neon-shadow-accent {
+        box-shadow:
+            0 0 5px #d90429,
+            0 0 10px #d90429,
+            0 0 15px #d90429;
+      }
+
+      @keyframes pulse-warning {
+        0%, 100% {
+            box-shadow: 0 0 3px rgba(217, 4, 41, 0.4), 0 0 5px rgba(217, 4, 41, 0.3);
+            border-color: rgba(217, 4, 41, 0.5);
+        }
+        50% {
+            box-shadow: 0 0 10px rgba(217, 4, 41, 0.8), 0 0 15px rgba(217, 4, 41, 0.6);
+            border-color: rgba(217, 4, 41, 1);
+        }
+      }
+
+      .column-overloaded-header {
+          animation: pulse-warning 2s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
